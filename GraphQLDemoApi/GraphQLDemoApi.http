@@ -1,0 +1,6 @@
+@GraphQLDemoApi_HostAddress = http://localhost:5262
+
+GET {{GraphQLDemoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
