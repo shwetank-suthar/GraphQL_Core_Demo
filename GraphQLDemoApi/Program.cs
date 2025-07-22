@@ -6,6 +6,7 @@ using GraphQLDemoApi.GraphQL.Queries;
 using HotChocolate.AspNetCore;
 using GraphQLDemoApi.Data;
 using GraphQLDemoApi.Models;
+using GraphQLDemoApi.GraphQL.Mutations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ builder.Services.AddDbContext<WebLineIndiaBackup15nov2024Context>(opt =>
 // Add GraphQL
 builder.Services
     .AddGraphQLServer()
-    .AddQueryType<Query>();
+    .AddQueryType<Query>()
+    .AddMutationType<Mutation>();
 
 // Add services to the container.
 builder.Services.AddOpenApi();
