@@ -22,13 +22,13 @@ This is a sample project demonstrating how to build a **GraphQL API** using:
 ## 🏗 Project Structure
 
 GraphQLDemoApi/
-│
-├── Models/ # Data models (e.g., UserLogin.cs)
-├── Data/ # EF DbContext
-│ └── WebLineIndiaBackup15nov2024Context.cs
-├── GraphQL/
-│ └── Queries/ # GraphQL Query resolver
-│ └── Query.cs
-├── appsettings.json # Connection strings
-├── Program.cs # App startup and DI config
-└── GraphQLDemoApi.csproj # Project file
+
+── Models/ # Data models (e.g., UserLogin.cs)
+── Data/ # EF DbContext
+ └── WebLineIndiaBackup15nov2024Context.cs
+── GraphQL/
+ └── Queries/ # GraphQL Query resolver
+ └── Query.cs
+── appsettings.json # Connection strings
+── Program.cs # App startup and DI config
+── GraphQLDemoApi.csproj # Project file
