@@ -11,6 +11,12 @@ namespace GraphQLDemoApi.GraphQL.Queries
         public IQueryable<UserLogin> GetUserLogins([Service] WebLineIndiaBackup15nov2024Context context)
             => context.UserLogins;
         
+        /// <summary>
+        /// Get UserLogin By Username
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public UserLogin? GetUserLoginByUsername(string username, [Service] WebLineIndiaBackup15nov2024Context context)
         {
             return context.UserLogins.FirstOrDefault(u => u.Username.ToLower() == username.ToLower());
