@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XzQ5R4E7WCE=",
+  "dgSpecHash": "VEsnx78EIeE=",
   "success": true,
-  "projectFilePath": "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
+  "projectFilePath": "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\winuser\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\winuser\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

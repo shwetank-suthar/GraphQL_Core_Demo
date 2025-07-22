@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj": {}
+    "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj": {}
   },
   "projects": {
-    "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj": {
+    "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
+        "projectUniqueName": "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
         "projectName": "GraphQLDemoApi",
-        "projectPath": "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
+        "projectPath": "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\GraphQLDemoApi.csproj",
         "packagesPath": "C:\\Users\\winuser\\.nuget\\packages\\",
-        "outputPath": "D:\\Shwetank\\Learning\\GrapgQL_Demo\\GraphQLDemoApi\\obj\\",
+        "outputPath": "D:\\Shwetank\\Learning\\GraphQL_Core_Demo\\GraphQLDemoApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
