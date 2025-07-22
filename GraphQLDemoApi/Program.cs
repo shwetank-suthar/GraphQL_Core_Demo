@@ -21,7 +21,15 @@ builder.Services
     .AddMutationType<Mutation>();
 
 // Add services to the container.
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi().AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -51,7 +59,7 @@ app.UseHttpsRedirection();
 //     return forecast;
 // })
 // .WithName("GetWeatherForecast");
-
+app.UseCors();
 app.MapGraphQL()
    .WithOptions(new GraphQLServerOptions
    {
