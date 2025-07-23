@@ -9,3 +9,27 @@ export const CREATE_USER_LOGIN = gql`
     }
   }
 `;
+
+export const UPDATE_USER_LOGIN = gql`
+  mutation UpdateUserLogin(
+    $userId: Int!
+    $username: String
+    $email: String
+    $phoneNumber: String
+    $name: String
+  ) {
+    updateUserLogin(
+      userId: $userId
+      username: $username
+      email: $email
+      phoneNumber: $phoneNumber
+      name: $name
+    ) {
+      userId
+      username
+      email
+      phoneNumber
+      name
+    }
+  }
+`;

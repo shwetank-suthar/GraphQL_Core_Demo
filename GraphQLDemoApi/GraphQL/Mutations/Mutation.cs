@@ -34,17 +34,46 @@ public class Mutation
         return user;
     }
 
-    public UserLogin? UpdateUserLogin(UpdateUserLoginInput input, [Service] WebLineIndiaBackup15nov2024Context context)
+    public async Task<UserLogin> UpdateUserLogin(
+        int userId,
+        string? username,
+        string? email,
+        string? phoneNumber,
+        string? name,
+        [Service] WebLineIndiaBackup15nov2024Context context)
     {
-        var user = context.UserLogins.FirstOrDefault(u => u.UserId == input.UserId);
+        var user = await context.UserLogins.FindAsync(userId);
+        if (user == null)
+        {
+            throw new Exception("User not found");
+        }
+
+        user.Username = username ?? user.Username;
+        user.Email = email ?? user.Email;
+        user.PhoneNumber = phoneNumber ?? user.PhoneNumber;
+        user.Name = name ?? user.Name;
+
+        await context.SaveChangesAsync();
+        return user;
+    }
+
+    public async Task<UserLogin?> UpdateUserLoginAsync(
+        int userId,
+        string? username,
+        string? email,
+        string? phoneNumber,
+        string? name,
+        [Service] WebLineIndiaBackup15nov2024Context context)
+    {
+        var user = await context.UserLogins.FindAsync(userId);
         if (user == null) return null;
 
-        if (input.Password != null) user.Password = input.Password;
-        if (input.Email != null) user.Email = input.Email;
-        if (input.Name != null) user.Name = input.Name;
-        if (input.PhoneNumber != null) user.PhoneNumber = input.PhoneNumber;
+        user.Username = username ?? user.Username;
+        user.Email = email ?? user.Email;
+        user.PhoneNumber = phoneNumber ?? user.PhoneNumber;
+        user.Name = name ?? user.Name;
 
-        context.SaveChanges();
+        await context.SaveChangesAsync();
         return user;
     }
 }
