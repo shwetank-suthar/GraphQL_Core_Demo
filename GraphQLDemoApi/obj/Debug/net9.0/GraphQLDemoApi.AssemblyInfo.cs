@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphQLDemoApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a15aa7ec81945ccba4dd7dab7c90600a96af8868")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba4e8f3ba7facef49643542a830fc360d2b5d3d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphQLDemoApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphQLDemoApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

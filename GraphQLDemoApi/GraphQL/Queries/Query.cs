@@ -9,7 +9,7 @@ namespace GraphQLDemoApi.GraphQL.Queries
         public string Hello() => "GraphQL is working!";
         // Query all users
         public IQueryable<UserLogin> GetUserLogins([Service] WebLineIndiaBackup15nov2024Context context)
-            => context.UserLogins;
+            => context.UserLogins.Take(100);
         
         /// <summary>
         /// Get UserLogin By Username
