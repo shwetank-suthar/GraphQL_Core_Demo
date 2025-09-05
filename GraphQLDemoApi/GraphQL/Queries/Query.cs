@@ -1,5 +1,6 @@
 using GraphQLDemoApi.Models;
 using GraphQLDemoApi.Data;
+using HotChocolate;
 
 namespace GraphQLDemoApi.GraphQL.Queries
 {
@@ -21,7 +22,7 @@ namespace GraphQLDemoApi.GraphQL.Queries
         {
             return context.UserLogins.FirstOrDefault(u => u.Username.ToLower() == username.ToLower());
         }
-        
+
         public async Task<UserLogin> UpdateUserLogin(
             int userId,
             string? username,
@@ -42,5 +43,13 @@ namespace GraphQLDemoApi.GraphQL.Queries
             return user;
         }
 
+        [GraphQLName("userLoginByUsername")]
+        public IQueryable<UserLogin> userLoginByUsername(
+            string username,
+            [Service] WebLineIndiaBackup15nov2024Context context)
+        {
+            return context.UserLogins
+                        .Where(u => u.Username.Contains(username));
+        }
     }
 }

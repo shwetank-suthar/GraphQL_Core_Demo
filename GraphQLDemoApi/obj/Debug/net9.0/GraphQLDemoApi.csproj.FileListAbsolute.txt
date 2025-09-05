@@ -407,3 +407,8 @@ D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\obj\Debug\net9.0\refint\Gr
 D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\obj\Debug\net9.0\GraphQLDemoApi.pdb
 D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\obj\Debug\net9.0\GraphQLDemoApi.genruntimeconfig.cache
 D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\obj\Debug\net9.0\ref\GraphQLDemoApi.dll
+D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\bin\Debug\net9.0\GraphQLDemoApi.xml
+D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Shwetank\Learning\GraphQL_Core_Demo\GraphQLDemoApi\obj\Debug\net9.0\GraphQLDemoApi.xml

@@ -21,7 +21,32 @@ builder.Services
     .AddMutationType<Mutation>();
 
 // Add services to the container.
-builder.Services.AddOpenApi().AddCors(options =>
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "GraphQL Demo API",
+        Version = "v1",
+        Description = "A GraphQL API with REST endpoints for user management",
+        Contact = new Microsoft.OpenApi.Models.OpenApiContact
+        {
+            Name = "GraphQL Demo API",
+            Email = "admin@example.com"
+        }
+    });
+    
+    // Include XML comments if available
+    var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = System.IO.Path.Combine(System.AppContext.BaseDirectory, xmlFile);
+    if (System.IO.File.Exists(xmlPath))
+    {
+        c.IncludeXmlComments(xmlPath);
+    }
+});
+
+builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
@@ -36,7 +61,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi(); // Swagger
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GraphQL Demo API v1");
+        c.RoutePrefix = "swagger"; // Set Swagger UI at /swagger
+        c.DocumentTitle = "GraphQL Demo API Documentation";
+        c.DefaultModelsExpandDepth(-1); // Hide models section
+    });
 }
 
 app.UseHttpsRedirection();
@@ -60,6 +92,11 @@ app.UseHttpsRedirection();
 // })
 // .WithName("GetWeatherForecast");
 app.UseCors();
+
+// Map controllers for REST API endpoints
+app.MapControllers();
+
+// Map GraphQL endpoint
 app.MapGraphQL()
    .WithOptions(new GraphQLServerOptions
    {

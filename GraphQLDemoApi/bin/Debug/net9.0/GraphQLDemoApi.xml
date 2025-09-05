@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GraphQLDemoApi</name>
+    </assembly>
+    <members>
+        <member name="M:GraphQLDemoApi.Controllers.HealthController.Get">
+            <summary>
+            Health check endpoint
+            </summary>
+            <returns>API health status</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.HealthController.GetDetailed">
+            <summary>
+            Detailed health check with database connectivity
+            </summary>
+            <returns>Detailed health status</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.GetUsers">
+            <summary>
+            Get all users
+            </summary>
+            <returns>List of all users</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Get user by ID
+            </summary>
+            <param name="id">User ID</param>
+            <returns>User details</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.SearchUsers(System.String)">
+            <summary>
+            Search users by username
+            </summary>
+            <param name="username">Username to search for</param>
+            <returns>List of matching users</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.CreateUser(GraphQLDemoApi.Controllers.CreateUserRequest)">
+            <summary>
+            Create a new user
+            </summary>
+            <param name="user">User data</param>
+            <returns>Created user</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.UpdateUser(System.Int32,GraphQLDemoApi.Controllers.UpdateUserRequest)">
+            <summary>
+            Update user information
+            </summary>
+            <param name="id">User ID</param>
+            <param name="user">Updated user data</param>
+            <returns>Updated user</returns>
+        </member>
+        <member name="M:GraphQLDemoApi.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Delete a user
+            </summary>
+            <param name="id">User ID</param>
+            <returns>Success message</returns>
+        </member>
+        <member name="T:GraphQLDemoApi.Controllers.CreateUserRequest">
+            <summary>
+            Request model for creating a new user
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.CreateUserRequest.Username">
+            <summary>
+            Username for the user
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.CreateUserRequest.Password">
+            <summary>
+            Password for the user
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.CreateUserRequest.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.CreateUserRequest.Name">
+            <summary>
+            Full name
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.CreateUserRequest.PhoneNumber">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="T:GraphQLDemoApi.Controllers.UpdateUserRequest">
+            <summary>
+            Request model for updating user information
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.UpdateUserRequest.Username">
+            <summary>
+            Username for the user
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.UpdateUserRequest.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.UpdateUserRequest.Name">
+            <summary>
+            Full name
+            </summary>
+        </member>
+        <member name="P:GraphQLDemoApi.Controllers.UpdateUserRequest.PhoneNumber">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="M:GraphQLDemoApi.GraphQL.Queries.Query.GetUserLoginByUsername(System.String,GraphQLDemoApi.Models.WebLineIndiaBackup15nov2024Context)">
+            <summary>
+            Get UserLogin By Username
+            </summary>
+            <param name="username"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
